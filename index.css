@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: Arial, sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -21,6 +21,13 @@ nav {
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 10px;
+}
+
+.Logo {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 .search {
@@ -85,9 +92,10 @@ nav {
 }
 
 .slider {
-  background: url('https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80');
+  background: radial-gradient(circle, #369e61 10%, black 70%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   overflow: hidden;
+  transition: all 1.5s ease-in-out;
 }
 
 .sliderWrapper {
@@ -168,22 +176,6 @@ nav {
 .buyButton:hover {
   background-color: white;
   color: black;
-}
-
-.sliderItem:nth-child(1) .sliderBg {
-  background-color: #369e62;
-}
-.sliderItem:nth-child(2) .sliderBg {
-  background-color: rebeccapurple;
-}
-.sliderItem:nth-child(3) .sliderBg {
-  background-color: teal;
-}
-.sliderItem:nth-child(4) .sliderBg {
-  background-color: cornflowerblue;
-}
-.sliderItem:nth-child(5) .sliderBg {
-  background-color: rgb(124, 115, 80);
 }
 
 .features {
@@ -448,13 +440,13 @@ label {
 
 @keyframes spin {
   0% {
-    transform: rotateZ(0deg);
+    transform: rotateZ(-10deg);
   }
   50% {
     transform: rotateZ(10deg);
   }
   100% {
-    transform: rotateZ(0deg);
+    transform: rotateZ(-10deg);
   }
 }
 
@@ -540,13 +532,17 @@ footer {
 
 .fListItem {
   margin-bottom: 10px;
-  color: gray;
-  cursor: pointer;
   text-transform: capitalize;
+}
+
+.fListItem a {
+  color: gray;
+  text-decoration: none;
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
-.fListItem:hover {
+.fListItem a:hover {
   color: black;
 }
 
@@ -735,7 +731,8 @@ footer {
   }
 
   .galleryTitle {
-    font-size: 25px;
+    font-size: 20px;
+    text-align: center;
   }
 
   .fMenuTitle {

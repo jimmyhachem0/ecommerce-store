@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('img/feedback-background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #111111a8;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+}
+
+input,
+textarea,
+button,
+a {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input,
+textarea {
+  background: #33333394;
+  color: #fff;
+  font-size: 1rem;
+}
+
+button {
+  background: lightgray;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #fff;
+}
+
+a {
+  color: #000;
+  background: lightgray;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+a:hover {
+  background: #fff;
+}
+
+.message {
+  color: red;
+  font-size: 1rem;
+  margin-top: 10px;
+  display: none;
+}

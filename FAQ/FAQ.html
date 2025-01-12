@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="FAQ.css">
+    <link rel="shortcut icon" href="img/blazer.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq">
+            <div class="question">1. How can I track my order?</div>
+            <div class="answer">You can track your order by logging into your account and clicking on the "Track Order" section in your dashboard.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question">2. What is your return policy?</div>
+            <div class="answer">We offer a 30-day return policy for all items. Please ensure the product is unused and in its original packaging.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question">3. Do you offer international shipping?</div>
+            <div class="answer">Yes, we ship to most countries worldwide. Shipping fees and delivery times vary based on location.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question">4. How can I contact customer support?</div>
+            <div class="answer">You can reach our support team via email at <a href="mailto:FAQ@float.com">support@float.com</a> or call us at +961 31-415-926.</div>
+        </div>
+
+        <a href="../index.html#footer">Back to main page</a>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

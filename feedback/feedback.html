@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="shortcut icon" href="img/blazer.png">
+
+</head>
+<body>
+    <div class="container">
+        <h1>We Value Your Feedback</h1>
+        <p>Your feedback helps us improve. Please share your thoughts below.</p>
+
+        <form id="feedbackForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="feedback" rows="5" placeholder="Your Feedback" required></textarea>
+            <button type="submit">Submit</button>
+            <a href="../index.html#footer">Back to main page</a>
+
+            <div class="message" id="successMessage">Thank you for your feedback!</div>
+        </form>
+    </div>
+
+    <script>
+        const feedbackForm = document.getElementById('feedbackForm');
+        const successMessage = document.getElementById('successMessage');
+
+        feedbackForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            successMessage.style.display = 'block';
+            feedbackForm.reset();
+        });
+    </script>
+</body>
+</html>

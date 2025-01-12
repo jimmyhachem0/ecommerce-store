@@ -5,6 +5,8 @@ search.addEventListener('click', () => {
   searchInput.value = '';
 });
 
+const sliderBackground = document.querySelector('.slider');
+
 const wrapper = document.querySelector('.sliderWrapper');
 const menuItems = document.querySelectorAll('.menuItem');
 
@@ -96,16 +98,35 @@ const currentProductSizes = document.querySelectorAll('.size');
 
 menuItems.forEach((item, index) => {
   item.addEventListener('click', () => {
+    choosenProduct = products[index];
+
     menuItems.forEach((item, index) => {
       item.style.color = 'lightgray';
+      if (choosenProduct.id == 1) {
+        sliderBackground.style.background =
+          'radial-gradient(circle, #369e61 10%, black 70%)';
+      }
+      if (choosenProduct.id == 2) {
+        sliderBackground.style.background =
+          'radial-gradient(circle, rebeccapurple 10%, black 70%)';
+      }
+      if (choosenProduct.id == 3) {
+        sliderBackground.style.background =
+          'radial-gradient(circle, teal 10%, black 70%)';
+      }
+      if (choosenProduct.id == 4) {
+        sliderBackground.style.background =
+          'radial-gradient(circle, cornflowerblue 10%, black 70%)';
+      }
+      if (choosenProduct.id == 5) {
+        sliderBackground.style.background =
+          'radial-gradient(circle, rgb(124, 115, 80) 10%, black 70%)';
+      }
     });
     item.style.color = 'white';
 
-    //change the current slide
+    //changee the current slide
     wrapper.style.transform = `translateX(${-100 * index}vw)`;
-
-    //change the choosen product
-    choosenProduct = products[index];
 
     //change texts of currentProduct
     currentProductTitle.textContent = choosenProduct.title;
@@ -161,5 +182,5 @@ window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
 
   // Adjust the vertical background position based on the scroll
-  newSeason.style.backgroundPosition = `center ${scrollPosition * 1}px`;
+  newSeason.style.backgroundPosition = `center ${scrollPosition * 1.1}px`;
 });
