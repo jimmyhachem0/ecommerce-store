@@ -92,7 +92,8 @@ nav {
 }
 
 .slider {
-  background: radial-gradient(circle, #369e61 10%, black 70%);
+  background: radial-gradient(circle, #369e6133 10%, rgba(0, 0, 0, 0) 60%),
+    url('img/index-background.jpg');
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   overflow: hidden;
   transition: all 1.5s ease-in-out;

@@ -104,23 +104,23 @@ menuItems.forEach((item, index) => {
       item.style.color = 'lightgray';
       if (choosenProduct.id == 1) {
         sliderBackground.style.background =
-          'radial-gradient(circle, #369e61 10%, black 70%)';
+          'radial-gradient(circle, #369e6133 10%, rgba(0, 0, 0, 0) 60%),url("img/index-background.jpg")';
       }
       if (choosenProduct.id == 2) {
         sliderBackground.style.background =
-          'radial-gradient(circle, rebeccapurple 10%, black 70%)';
+          'radial-gradient(circle, #66339933 10%, rgba(0, 0, 0, 0) 60%),url("img/index-background.jpg")';
       }
       if (choosenProduct.id == 3) {
         sliderBackground.style.background =
-          'radial-gradient(circle, teal 10%, black 70%)';
+          'radial-gradient(circle, #00808033 10%, rgba(0, 0, 0, 0) 60%),url("img/index-background.jpg")';
       }
       if (choosenProduct.id == 4) {
         sliderBackground.style.background =
-          'radial-gradient(circle, cornflowerblue 10%, black 70%)';
+          'radial-gradient(circle, #6495ed33 10%, rgba(0, 0, 0, 0) 60%),url("img/index-background.jpg")';
       }
       if (choosenProduct.id == 5) {
         sliderBackground.style.background =
-          'radial-gradient(circle, rgb(124, 115, 80) 10%, black 70%)';
+          'radial-gradient(circle, #7c735033 10%, rgba(0, 0, 0, 0) 60%),url("img/index-background.jpg")';
       }
     });
     item.style.color = 'white';
