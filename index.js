@@ -15,6 +15,7 @@ const products = [
     id: 1,
     title: 'Air Force',
     price: 119,
+    desc: 'Classic Nike Air Force shoes blend timeless design with superior comfort, featuring durable materials and signature cushioning.',
     colors: [
       {
         code: 'black',
@@ -30,6 +31,7 @@ const products = [
     id: 2,
     title: 'Air Jordan',
     price: 149,
+    desc: 'Iconic Jordan shoes deliver unmatched performance and style, crafted for basketball enthusiasts and streetwear lovers alike.',
     colors: [
       {
         code: 'lightgray',
@@ -45,6 +47,7 @@ const products = [
     id: 3,
     title: 'Blazer',
     price: 109,
+    desc: 'Retro-inspired Nike Blazers combine sleek design with premium materials, perfect for casual and sporty looks.',
     colors: [
       {
         code: 'lightgray',
@@ -60,6 +63,7 @@ const products = [
     id: 4,
     title: 'Crater',
     price: 129,
+    desc: 'Sustainable Nike Crater shoes feature eco-friendly materials and innovative design, offering style with a commitment to the planet.',
     colors: [
       {
         code: 'black',
@@ -75,6 +79,7 @@ const products = [
     id: 5,
     title: 'Hippie',
     price: 99,
+    desc: 'Unique Nike Hippie shoes stand out with bold designs and sustainable craftsmanship, merging comfort, style, and environmental responsibility.',
     colors: [
       {
         code: 'gray',
@@ -95,6 +100,7 @@ const currentProductTitle = document.querySelector('.productTitle');
 const currentProductPrice = document.querySelector('.productPrice');
 const currentProductColors = document.querySelectorAll('.color');
 const currentProductSizes = document.querySelectorAll('.size');
+const currentProductDesc = document.querySelector('.productDesc');
 
 menuItems.forEach((item, index) => {
   item.addEventListener('click', () => {
@@ -132,6 +138,7 @@ menuItems.forEach((item, index) => {
     currentProductTitle.textContent = choosenProduct.title;
     currentProductPrice.textContent = '$' + choosenProduct.price;
     currentProductImg.src = choosenProduct.colors[0].img;
+    currentProductDesc.textContent = choosenProduct.desc;
 
     //assigning new colors
     currentProductColors.forEach((color, index) => {
@@ -182,5 +189,5 @@ window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
 
   // Adjust the vertical background position based on the scroll
-  newSeason.style.backgroundPosition = `center ${scrollPosition * 1.1}px`;
+  newSeason.style.backgroundPosition = `center ${scrollPosition * 0.7}px`;
 });
